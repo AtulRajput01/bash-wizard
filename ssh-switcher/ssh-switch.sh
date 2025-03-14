@@ -49,25 +49,21 @@ echo "                                                                ╚══�
 sleep 1
 echo -ne "${RESET}"
 
-# Boom Animation
 echo -e "\n${GREEN}${BOLD}"
-echo "                                                               \    /_\    / " 
-echo "                                                                \/     \/  "
-echo "                                                                 ) Activated(   " 
-echo "                                                                /  \/  \   "
-echo "                                                               /   ||   \  "
-echo "                                                                   ||       "
-echo "                                                                   ||       "
-echo "                                                                   ||       "
-echo -e "${RESET}"
+echo "                                                                         ╭┳╮╭┳╮  "  
+echo "                                                                         █⎔╰╯⎖█  "  
+echo "                                                                         ╰╦▌▐╦╯  "  
+echo "                                                                         ▄▄██▄▄  "  
+echo -e                                                                       "${RESET}"
 
-# Matrix effect
-for i in {1..15}; do
-    echo -ne "${GREEN}$(tr -dc '01' < /dev/urandom | head -c 20)${RESET}"
-    echo -n " "
-    sleep 0.01
-done
-echo -e "\n"
+# Blinking Welcome Message
+echo -e "${BLUE}${BOLD}${BLINK}"
+echo "                                                                ╔════════════════════════╗"
+echo "                                                                ║   Let's hack Server..! ║"
+echo "                                                                ╚════════════════════════╝"
+sleep 1
+echo -ne "${RESET}"
+
 
 # Popup notification
 if command -v notify-send &> /dev/null; then
