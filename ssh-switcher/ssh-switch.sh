@@ -35,10 +35,10 @@ echo -ne "${BLUE}${BOLD}"
 for i in {1..2}; do
     for j in W e l c o m e   b a c k   A t u l; do
         echo -n "$j"
-        sleep 0.01
+        sleep 0.0001
     done
     echo -ne "\r               \r"
-    sleep 0.1
+    sleep 0.0001
 done
 
 # Blinking Welcome Message
@@ -50,11 +50,13 @@ sleep 1
 echo -ne "${RESET}"
 
 echo -e "\n${GREEN}${BOLD}"
-echo "                                                                         ╭┳╮╭┳╮  "  
-echo "                                                                         █⎔╰╯⎖█  "  
-echo "                                                                         ╰╦▌▐╦╯  "  
-echo "                                                                         ▄▄██▄▄  "  
-echo -e                                                                       "${RESET}"
+echo -e "                                                                        ╭───────╮ "
+echo -e "                                                                        │ ${CYAN}░░▒▓▓${GREEN} │ "
+echo -e "                                                                        ╰─${BLUE}▗${RED}▄${YELLOW}▄${BLUE}▄${GREEN}▖─╯ "
+echo -e "                                                                          ${RED}▀${YELLOW}▀${BLUE}▀${RED}▀${GREEN}▀"
+echo -e "${GREEN}    ${BOLD}                                                             Time To Tweak THE MATRIX${RESET}"
+echo -e "${RESET}"
+
 
 # Blinking Welcome Message
 echo -e "${BLUE}${BOLD}${BLINK}"
@@ -74,15 +76,6 @@ fi
 
 # Scanning animation
 echo -e "\n${CYAN}${BOLD}🔍 Scanning network interfaces...${RESET}"
-for i in {1..5}; do
-    echo -n "${GREEN}■${RESET} "
-    sleep 0.1
-done
-echo -e "\n"
-
-# Rest of the original script remains the same...
-# [Keep the original machine selection and connection code below]
-# ... (The rest of your original script continues here) ...
 
 # List Machines
 echo -e "${GREEN}Available Machines:${RESET}"
