@@ -1,0 +1,5 @@
+mahcine-name*,username*,/exact-pem-file-path.pem*,machine-url*
+aayan-dev-server,ubuntu,/home/amazing_atul/Downloads/devserver.pem,ec2-54-236-98-193.compute-1.amazonaws.com
+k8s-aayan-machine,ubuntu,/home/amazing_atul/Downloads/devserver.pem,ec2-174-129-237-32.compute-1.amazonaws.com
+razespace-machine,ubuntu,/home/amazing_atul/Downloads/razespace.pem,ec2-54-172-118-239.compute-1.amazonaws.com
+
