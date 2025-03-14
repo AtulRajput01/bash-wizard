@@ -2,6 +2,9 @@
 
 CONFIG_FILE="machines.txt"
 
+# Absolute path to your MP3 file
+MP3_FILE="/home/amazing_atul/Downloads/JARVIS.mp3"
+
 # Colors
 GREEN="\e[32m"
 YELLOW="\e[33m"
@@ -17,6 +20,12 @@ BLINK="\e[5m"
 if ! command -v neofetch &> /dev/null; then
     echo -e "${RED}⚠ Neofetch is not installed! Run: sudo apt install neofetch${RESET}"
     exit 1
+fi
+
+# Check dependencies
+if ! command -v play &> /dev/null; then
+    echo -e "${YELLOW}Installing audio requirements...${RESET}"
+    sudo apt update && sudo apt install -y sox libsox-fmt-mp3
 fi
 
 # Clear and Show Hacker Interface
@@ -49,6 +58,15 @@ echo "                                                                ╚══�
 sleep 1
 echo -ne "${RESET}"
 
+play -q "$MP3_FILE" 2>/dev/null &
+
+echo -ne "\n${RED}${BOLD}                                                                 Initializing Secure Terminal "
+for i in {1....2}; do
+    echo -n "•••••"
+    sleep 1
+done
+echo -e "${RESET}\n"
+
 echo -e "\n${GREEN}${BOLD}"
 echo -e "                                                                        ╭───────╮ "
 echo -e "                                                                        │ ${CYAN}░░▒▓▓${GREEN} │ "
@@ -76,6 +94,7 @@ fi
 
 # Scanning animation
 echo -e "\n${CYAN}${BOLD}🔍 Scanning network interfaces...${RESET}"
+
 
 # List Machines
 echo -e "${GREEN}Available Machines:${RESET}"
